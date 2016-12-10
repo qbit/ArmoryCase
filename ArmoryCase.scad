@@ -10,7 +10,7 @@ sdBox=[16.66, 14.42, 1.88 * 2];
 compBox=[29.15, 18.4, 1.88 * 2];
 
 difference() {
-    roundedBox(mainBox, 2, true);
+    roundedBox(mainBox, 2, false);
     translate([0,0,4]) {
         cube(insideBox, true);
     }
