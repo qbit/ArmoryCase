@@ -4,7 +4,7 @@ use <MCAD/boxes.scad>
 
 // Length, Width, Height
 mainBox=[57.760, 23.74, 5.525];
-insideBox=[54.20, 19.79, 8.526];
+insideBox=[54.20, 19.85, 8.526];
 usbBox=[59, 11.95, 10.5];
 sdBox=[16.66, 14.42, 1.88 * 2];
 compBox=[29.15, 18.4, 1.88 * 2];
