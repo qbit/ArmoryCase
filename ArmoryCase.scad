@@ -4,6 +4,8 @@ use <MCAD/boxes.scad>
 
 // Length, Width, Height
 mainBox=[57.760, 23.74, 5.525];
+// Y is offset wrong, possibly because of my printer
+// 19.85 comes out to 19.19
 insideBox=[54.20, 19.95, 8.526];
 usbBox=[59, 11.95, 10.5];
 sdBox=[16.66, 14.42, 1.88 * 2];
