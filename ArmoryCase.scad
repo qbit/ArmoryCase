@@ -13,6 +13,14 @@ usbBox=[59, 11.95, 10.5];
 sdBox=[16.66, 14.42, 1.88 * 2];
 compBox=[29.15, 18.4, 1.88 * 2];
 
+module hole() {
+    cylinder(h=5, r1=2, r2=2, center=true);
+}
+
+module peg() {
+    cube([6, (lidBox[1] - lidInside[1]) / 2, 3], center=false);
+}
+
 difference() {
     roundedBox(mainBox, 2, true);
     translate([0,0,4]) {
@@ -28,17 +36,11 @@ difference() {
         cube(compBox, true);
     }
     translate([0, lidBox[1] / -2, 0]) {
-        cube([6, (lidBox[1] - lidInside[1]) / 2, 3], center=false);
+        peg();
     }
     translate([-6, (lidBox[1] / 2) - 1.9, 0]) {
-        cube([6, (lidBox[1] - lidInside[1]) / 2, 3], center=false);
+        peg();
     }
-}
-
-
-
-module hole() {
-    cylinder(h=5, r1=2, r2=2, center=true);
 }
 
 translate([0, 25, -1.8]) {
@@ -58,10 +60,10 @@ translate([0, 25, -1.8]) {
             
         }
     }
-    translate([0, lidBox[1] / -2, 0]) {
-        cube([6, (lidBox[1] - lidInside[1]) / 2, 3], center=false);
+    translate([-6, lidBox[1] / -2, 0]) {
+        peg();
     }
-    translate([-6, (lidBox[1] / 2) - 1.9, 0]) {
-        cube([6, (lidBox[1] - lidInside[1]) / 2, 3], center=false);
+    translate([0, (lidBox[1] / 2) - 1.9, 0]) {
+        peg();
     }
 }
